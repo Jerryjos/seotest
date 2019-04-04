@@ -3,7 +3,7 @@ var express=require('express');
 var app=express();
 const port=process.env.PORT || 8007
 app.use(express.static(__dirname + '/static'));
-app.get('/a.html', function(req,res) {
+app.get('/', function(req,res) {
 data= fs.readFile('a.html',   function (err, data) {
 res.setHeader('Content-Type', 'text/html');
 res.send(data);
