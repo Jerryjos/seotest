@@ -9,6 +9,12 @@ res.setHeader('Content-Type', 'text/html');
 res.send(data);
 });
 });
+app.get('/a.html', function(req,res) {
+data= fs.readFile('a.html',   function (err, data) {
+res.setHeader('Content-Type', 'text/html');
+res.send(data);
+});
+});
 app.get('/b.html', function(req,res) {
 data= fs.readFile('b.html',   function (err, data) {
 res.setHeader('Content-Type', 'text/html');
